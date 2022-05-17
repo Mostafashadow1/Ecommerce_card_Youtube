@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+}
+
+.product-card {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px 30px;
+  z-index: 3;
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 5%), 0 0 3px 0 rgb(0 0 0 / 10%);
+  overflow: hidden;
+}
+
+.product-card > .logo {
+  display: grid;
+  place-items: center;
+}
+.product-card > .logo > img {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
+
+.product-card .images {
+  position: relative;
+  height: 220px;
+}
+.product-card .images img {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(19deg);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 300ms linear;
+}
+
+.product-card .images img.active {
+  opacity: 1;
+}
+
+.product-card .details > .name {
+  font-size: 30px;
+  font-weight: 500px;
+  color: #111;
+}
+
+.product-card .details > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 2;
+}
+
+.product-card .details .stars > i {
+  color: #d5b611;
+}
+
+.color-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.product-card .color-price .color-option {
+  display: flex;
+  align-items: center;
+}
+
+.color-option .circles {
+  display: flex;
+}
+.color-option .circles .circle {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.color-option .circles .circle.green {
+  background-color: #3ebfad;
+}
+.color-option .circles .circle.green.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #3ebfad;
+}
+
+.color-option .circles .circle.blue {
+  background-color: #2060a3;
+}
+.color-option .circles .circle.blue.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2060a3;
+}
+
+.color-option .circles .circle.black {
+  background: #000;
+}
+.color-option .circles .circle.black.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000;
+}
+
+.color-price .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-price .price > h6 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #111;
+}
