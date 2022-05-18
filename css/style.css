@@ -12,7 +12,7 @@ body {
   height: 100vh;
   display: grid;
   place-items: center;
-  background-color: #fffcfc;
+  background-color: #c9ba34;
   color: #000;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .card .details .stars > i {
-  color: #d5b611;
+  color: #c9ba34;
 }
 
 .price_color {
